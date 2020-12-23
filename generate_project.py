@@ -24,7 +24,7 @@ REQUIREMENTS_TXT_CONTENT = """argparse"""
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('--directory', required=True)
+    parser.add_argument('--base_directory', required=True)
     parser.add_argument('--project', required=True)
     args = parser.parse_args()
 
@@ -33,20 +33,21 @@ if __name__ == "__main__":
     if not project_pattern.match(args.project):
         print('Project name must match following regex: ' % PROJECT_REGEX)
 
-    # Create the project  directory if it doesn't already exist
-    if not os.path.exists(args.output_dir):
-        print('Creating new directory %s' % args.output_dir)
-        os.makedirs(args.output_dir)
+    # Create the project  base_directory if it doesn't already exist
+    project_directory = os.path.join(args.base_directory, args.project)
+    if not os.path.exists(project_directory):
+        os.makedirs(project_directory)
 
-    f = open(os.path.join(args.output_dir, ".gitignore", "w")
+    f = open(os.path.join(project_directory, ".gitignore"), "w")
     f.write(GITIGNORE_CONTENT)
     f.close()
 
-    f = open(os.path.join(args.output_dir, args.project + ".py", "w")
+    f = open(os.path.join(project_directory, args.project + ".py"), "w")
     f.write(SCRIPT_CONTENT)
     f.close()
 
-    f = open(os.path.join(args.output_dir, "requirements.txt", "w")
+    f = open(os.path.join(project_directory, "requirements.txt"), "w")
     f.write(REQUIREMENTS_TXT_CONTENT)
     f.close
 
+    print('Successfully generated new project at %s' % project_directory)

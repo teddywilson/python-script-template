@@ -1,3 +1,13 @@
 # Python Script Template
 
-(WIP) My Python script template, because I hate rewriting this every time.
+My (work in progress) Python script template, because I hate rewriting these things every time.
+
+## Usage
+```
+pip3 install -r requirements.txt
+./generate_project.py --base_directory=/Path/to/dir --project=my-project
+```
+
+## TODO
+- [ ] Generate `README.md`
+- [ ] Add instructions on adding script to path
