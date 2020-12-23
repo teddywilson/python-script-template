@@ -1,6 +1,8 @@
 # Python Script Template
 
-My Python script template, because I hate rewriting these things every time.
+My Python script template, because I hate rewriting these things every time. This template takes two arguments:
+1. `--base_directory`: The base directory under which the new project should be generated (likely your dev folder)
+2. `--project`: The name of the project you wish to generate
 
 ## Usage
 ```
@@ -10,6 +12,9 @@ python generate_project.py \
   --project=my-project
 ```
 
-## TODO
-- [x] Generate `README.md`
-- [ ] Add instructions on adding script to path
+## Content
+With this template, four files are provided:
+1. `$project.py`: core script with basic main function and argument parsing set up
+2. `README.md`: usage instructions, project information
+3. `requirements.txt`: file which dependencies will be added to
+4. `.gitignore`: files to be ignored by Git
