@@ -34,10 +34,7 @@ Two caveats about this:
 
 A new project (and relevant files) will be created at `$base_directory/$project`. For example:
 ```
-generate_python_script \ 
-  --base_directory=/Users/teddywilson/dev \
-  --project=my-project \
-  --description="My personal project"
+generate_python_script --base_directory=/teddywilson/dev --project=my-project --description="My personal project"
 ```  
 
 ## Content
