@@ -24,7 +24,7 @@ if __name__ == "__main__":
 """
 
 README_TEMPLATE = Template("""# $project
-
+$description
 ## Usage
 ```
 pip3 install -r requirements.txt
@@ -39,6 +39,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--base_directory', required=True)
     parser.add_argument('--project', required=True)
+    parser.add_argument('--description', required=False)
     args = parser.parse_args()
 
     # Validate project name
@@ -59,8 +60,9 @@ if __name__ == "__main__":
     f.write(SCRIPT_CONTENT)
     f.close()
 
+    description = "\n" + args.description + "\n" if args.description else ""
     f = open(os.path.join(project_directory, "README.md"), "w")
-    f.write(README_TEMPLATE.substitute(project=args.project))
+    f.write(README_TEMPLATE.substitute(project=args.project, description=description))
     f.close()
 
     f = open(os.path.join(project_directory, "requirements.txt"), "w")

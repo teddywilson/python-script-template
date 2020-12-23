@@ -7,9 +7,13 @@
   Python Script Template
 </h1>
 
-My Python script template, because I hate rewriting these things every time. This template takes two arguments:
+My Python script template, because I hate rewriting these things every time. This template takes 
+two required arguments:
 1. `--base_directory` Base directory under which the new project should be generated (likely your dev folder)
 2. `--project` The name of the project you wish to generate
+
+Optional arguments include:
+1. `--description` Project description (must be wrapped in quotes if spaces)
 
 ## Usage
 ```
