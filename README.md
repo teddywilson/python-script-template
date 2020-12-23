@@ -1,4 +1,11 @@
-# Python Script Template
+<p align="center">
+  <a href="https://github.com/teddywilson/python-script-template">
+    <img alt="Crane" src="crane.png" width=64 />
+  </a>
+</p>
+<h1 align="center">
+  Python Script Template
+</h1>
 
 My Python script template, because I hate rewriting these things every time. This template takes two arguments:
 1. `--base_directory` Base directory under which the new project should be generated (likely your dev folder)
