@@ -15,9 +15,12 @@ SCRIPT_CONTENT = """#!/usr/bin/env python
 import argparse
 
 
-if __name == "__main":
+if __name__ == "__main__":
   parser = argparse.ArgumentParser()
   parser.add_argument('--argument', required=True)
+  args = parser.parse_args()
+
+  print('hello world')
 """
 
 README_TEMPLATE = Template("""# $project
