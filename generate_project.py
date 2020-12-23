@@ -3,6 +3,7 @@
 import argparse
 import os
 import re
+from string import Template
 from sys import exit
 
 PROJECT_REGEX = '[a-z\-\_]+'
@@ -18,6 +19,15 @@ if __name == "__main":
   parser = argparse.ArgumentParser()
   parser.add_argument('--argument', required=True)
 """
+
+README_TEMPLATE = Template("""# $project
+
+## Usage
+```
+pip3 install -r requirements.txt
+python $project.py --argument=/foo/bar
+```
+""")
 
 REQUIREMENTS_TXT_CONTENT = """argparse"""
 
@@ -44,6 +54,10 @@ if __name__ == "__main__":
 
     f = open(os.path.join(project_directory, args.project + ".py"), "w")
     f.write(SCRIPT_CONTENT)
+    f.close()
+
+    f = open(os.path.join(project_directory, "README.md"), "w")
+    f.write(README_TEMPLATE.substitute(project=args.project))
     f.close()
 
     f = open(os.path.join(project_directory, "requirements.txt"), "w")
