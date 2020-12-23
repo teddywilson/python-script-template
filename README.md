@@ -1,8 +1,8 @@
 # Python Script Template
 
 My Python script template, because I hate rewriting these things every time. This template takes two arguments:
-1. `--base_directory`: The base directory under which the new project should be generated (likely your dev folder)
-2. `--project`: The name of the project you wish to generate
+1. `--base_directory` Base directory under which the new project should be generated (likely your dev folder)
+2. `--project` The name of the project you wish to generate
 
 ## Usage
 ```
@@ -11,6 +11,8 @@ python generate_project.py \
   --base_directory=/Path/to/dir \
   --project=my-project
 ```
+
+A new project (and relevant files) will be created at `$base_directory/$project`.
 
 ## Content
 With this template, four files are provided:
