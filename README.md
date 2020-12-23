@@ -19,7 +19,7 @@ python generate_project.py \
   --project=my-project
 ```
 
-A new project (and relevant files) will be created at `$base_directory/$project`.
+A new project (and relevant files) will be created at `$base_directory/$project`
 
 ## Content
 With this template, four files are provided:
