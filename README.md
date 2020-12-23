@@ -32,7 +32,13 @@ Two caveats about this:
 * Notice that symlink name drops the `py` suffix
 * `usr/local/bin` must be on your $PATH
 
-A new project (and relevant files) will be created at `$base_directory/$project`
+A new project (and relevant files) will be created at `$base_directory/$project`. For example:
+```
+generate_python_script \ 
+  --base_directory=/Users/teddywilson/dev \
+  --project=my-project \
+  --description="My personal project"
+```  
 
 ## Content
 With this template, four files are provided:
