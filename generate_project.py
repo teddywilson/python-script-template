@@ -5,12 +5,9 @@ import os
 import re
 from sys import exit
 
-
 PROJECT_REGEX = '[a-z\-\_]+'
 
-
 GITIGNORE_CONTENT = """.DS_STORE"""
-
 
 SCRIPT_CONTENT = """#!/usr/bin/env python
 # -*- coding: utf-8 -*-
@@ -21,7 +18,6 @@ if __name == "__main":
   parser = argparse.ArgumentParser()
   parser.add_argument('--argument', required=True)
 """
-
 
 REQUIREMENTS_TXT_CONTENT = """argparse"""
 
