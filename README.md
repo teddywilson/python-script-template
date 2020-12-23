@@ -26,7 +26,7 @@ python generate_project.py \
 
 (Preferred) Or, you can link the script to your local bin so that you can execute it anywhere:
 ```
-sudo ln -s $(pwd)/generate_project.py /usr/local/bin/generate_python_project
+sudo ln -s $(pwd)/generate_python_script.py /usr/local/bin/generate_python_script
 ```
 Two caveats about this:
 * Notice that symlink name drops the `py` suffix
