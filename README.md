@@ -12,12 +12,21 @@ My Python script template, because I hate rewriting these things every time. Thi
 2. `--project` The name of the project you wish to generate
 
 ## Usage
+You can execute the generation script like a normal Python script via the following: 
 ```
 pip3 install -r requirements.txt
 python generate_project.py \
   --base_directory=/Path/to/dir \
   --project=my-project
 ```
+
+(Preferred) Or, you can link the script to your local bin so that you can execute it anywhere:
+```
+sudo ln -s $(pwd)/generate_project.py /usr/local/bin/generate_python_project
+```
+Two caveats about this:
+* Notice that symlink name drops the `py` suffix
+* `usr/local/bin` must be on your $PATH
 
 A new project (and relevant files) will be created at `$base_directory/$project`
 
