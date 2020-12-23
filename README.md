@@ -14,7 +14,7 @@ python generate_project.py \
 
 ## Content
 With this template, four files are provided:
-1. `$project.py`: core script with basic main function and argument parsing set up
-2. `README.md`: usage instructions, project information
-3. `requirements.txt`: file which dependencies will be added to
-4. `.gitignore`: files to be ignored by Git
+1. `$project.py` Core script with basic main function and argument parsing set up
+2. `README.md` Usage instructions, project information
+3. `requirements.txt` File which dependencies will be added to
+4. `.gitignore` Files to be ignored by Git
